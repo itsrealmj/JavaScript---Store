@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mobile.css">
+    <title>Mama Dayang</title>
+</head>
+<body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105122471893746");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
+<!--   Messenger Chat Plugin Code end  -->
+
+    <header>
+        <div class="left">
+            <h3> Moses Mini Aviary</h3>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#product-container">Menu</a></li>
+                    <li><a href="#about-us">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div><span style="position: relative; top: -1.1rem; left: 2.2rem; font-size: .7rem;" id="count-display"> 0</span>
+                <a href="cart.html" style="margin-right: 1.5rem; position: relative; border: none;"><img src="./images/icon-cart.svg" alt="" ></a>
+                
+            </div>
+            <div>
+                <img id="icon-menu" src="./images/icon-menu.svg" alt="">
+                <img id="icon-closed" style="display:none" src="./images/icon-close.svg" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#product-container">Menu</a></li>
+                    <li><a href="#about-us">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="banner" id="banner">
+            <h1>We do not cook,
+                we create your emotions!
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ex!</p>
+            <div class="link">
+                <a href="#product-container" id="below-menu-btn">Our menu</a>
+                <a href="#about-us" id="below-aboutus-btn">About us</a>
+            </div>
+        </div>
+        <div class="banner-img">
+            <img src="./images/banner.jpg" alt="">
+        </div>
+    </main>
+
+    <div class="dishes">
+        <button>All dishes</button>
+        <button>Main dishes</button>
+        <button>Dessert</button>
+    </div>  
+    <section>
+        <div id="product-container" class="product-container">
+            <div class="product">
+                <img src="./images/1.png" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="./images/2.png" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./images/3.png" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="./images/4.jpg" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="./images/5.png" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="./images/6.jpg" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="./images/7.jpg" alt="dish One">
+                <div class="description">
+                    <p>Lorem, ipsum dolor.</p>
+                    <h5>500.00</h5>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+            </div>
+    </section>
+    
+    <article>
+        <img id="overlay" src="./images/logo.jpg" alt="">
+        <div class="promos">
+            <div>
+                <span>Discount 50%</span>
+                <p>Lorem ipsum dolor </p>
+                <a href="#"> Get it now</a>
+            </div>
+            <img src="./images/2.png" width="250px" alt="dish One">
+        </div>
+        <div class="promos">
+            <div>
+                <span>Discount 50%</span>
+                <p>Lorem ipsum dolor</p>
+                <a href="#"> Get it now</a>
+            </div>
+            <img src="./images/2.png" width="250px" alt="dish One">
+    </article>
+    
+    
+    <br><br><br>
+    <hr>
+    <article id="about-us">
+        <div class="left">
+            <!-- <img src="./images/4.png" alt=""> -->
+        </div>
+        <div class="right">
+            <div>
+                <span>We are located at</span>
+                <li>Tagoloan Misamis Oriental</li>
+            </div>
+            <br>
+            <div>
+                <span>Lorem ipsum dolor sit amet.</h6>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ex.</li>
+            </div>
+            <br>
+            <div>
+                <span>Lorem ipsum dolor sit amet.</h6>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ex.</li>
+            </div>
+                
+            </div>
+        </div>
+
+    </article>
+
+    <footer>
+        <div id="soc-media" class="soc-media">
+            <a href="#"><img src="./images/icon-instagram.svg" ></a>
+            <a href="#"><img src="./images/icon-facebook.svg" ></a>
+            <a href="#"><img src="./images/icon-twitter.svg" ></a>
+            <a href="#"><img src="./images/icon-youtube.svg" ></a>
+        </div>
+        <div>
+            <p class="copyright">Copyright Moses Mini Aviary All Rights Reserved</p>
+            <p class="madeby">Powered by itsmjnacional@gmail.com</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
