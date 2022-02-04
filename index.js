@@ -207,11 +207,12 @@ var cartBtn = document.querySelectorAll(".cart-btn")
                         <div class="carts">
                             <img src="${item.productImg}">
                             <p>${item.productName}</p>
+                            <p>${item.inCart}</p>
                             <p>${item.productPrice}</p>
                         </div>
                         `;
                     });
-                    document.querySelector('.cart-image-cost').innerHTML =`Total cost :     ${cartCosts}`;
+                    document.querySelector('.cart-image-cost').innerHTML =`Total cost : Php ${cartCosts}`;
             }
             
     }
@@ -230,3 +231,6 @@ var cartBtn = document.querySelectorAll(".cart-btn")
     onLoadCartCounts()
     displayCart()
 // display counts in cart end
+
+let filterBtns = document.querySelectorAll('.filter-btn')
+    

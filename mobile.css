@@ -12,20 +12,36 @@ html {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: .5rem 0;
+}
+.carts:nth-child(even){
+    background-color: #f8f6f634;
+}
+.carts p {
+    width: 100px;
+    text-align: center;
 }
 .carts img {
-    width: 250px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 .cart-title {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+}
+.cart-title h2 {
+    width: 200px;
 }
 .cart-image-cost {
+    font-weight: bold;
     display: flex;
-    margin-right: 7rem;
+    margin-right: 8rem;
     justify-content: flex-end;
+    padding: 1rem 0;
 }
 .cart-image-container {
 
