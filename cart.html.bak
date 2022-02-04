@@ -39,7 +39,6 @@
 
     <section>
         <div class="cart-image-container"></div>
-        <div class="cart-image-cost"></div>
     </section>
     <script src="./index.js"></script>
 </body>

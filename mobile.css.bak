@@ -7,13 +7,6 @@
 html {
     scroll-behavior: smooth;
 }
-.carts {
-    display: flex;
-    flex-direction: column;
-}
-.carts img {
-    width: 250px;
-}
 header {
     display: flex;
     justify-content: space-between;
