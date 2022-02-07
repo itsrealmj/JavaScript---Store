@@ -139,9 +139,12 @@ var cartBtn = document.querySelectorAll(".cart-btn")
         },
 
     ]
+    //let simple = []
+    
 // html objects
     for(let i = 0; i < cartBtn.length; i++){
         cartBtn[i].addEventListener("click", () => {
+            alert(`${products[i].productName} added to cart!`)
             cartNumbers(products[i]);
             updatePrice(products[i])
         })    
@@ -168,9 +171,9 @@ var cartBtn = document.querySelectorAll(".cart-btn")
             if (cartItems != null) {
                 if (cartItems[product.productName] == undefined ) {
                     cartItems = {
-                    ...cartItems,
-                    [product.productName]: product
-                }
+                        ...cartItems,
+                        [product.productName]: product
+                    }   
                 }
                 cartItems[product.productName].inCart += 1;
             }else {
@@ -179,6 +182,9 @@ var cartBtn = document.querySelectorAll(".cart-btn")
                     [product.productName]: product
                 }
             }
+            
+            // simple.push(cartItems)
+            // localStorage.setItem('productInCart',JSON.stringify(simple));
             localStorage.setItem('productInCart',JSON.stringify(cartItems));
     }
 
@@ -186,37 +192,50 @@ var cartBtn = document.querySelectorAll(".cart-btn")
         let cartCosts = localStorage.getItem('totalCost');
             cartCosts = Number(cartCosts);
         if (cartCosts != null) {
-
             localStorage.setItem('totalCost',cartCosts += product.productPrice)
         }else{
             localStorage.setItem('totalCost',product.productPrice)
         }
     }
+    
         
-
+        
+    function deleteItem(del){
+        let cartItems = localStorage.getItem('productInCart');
+        del.parentElement.parentElement.parentElement.remove()
+    }
+    
     function displayCart(){
         let cartItems = localStorage.getItem('productInCart');
         let cartCosts = localStorage.getItem('totalCost');
-
             cartItems = JSON.parse(cartItems)
-            document.querySelector('.cart-image-container');
-            if (cartItems && document.querySelector('.cart-image-container')) {
+        
+            let cartImageContainer = document.querySelector('.cart-image-container');
+            if (cartItems && cartImageContainer) {
                     document.querySelector('.cart-image-container').innerHTML = '';
                     Object.values(cartItems).map(item => {
                         document.querySelector('.cart-image-container').innerHTML += `
                         <div class="carts">
                             <img src="${item.productImg}">
-                            <p>${item.productName}</p>
-                            <p>${item.inCart}</p>
-                            <p>${item.productPrice}</p>
+                            <div >
+                                <p>${item.productName}</p>
+                                <div class="item-name">
+                                    <span onclick="minus"> - </span>
+                                    <span>${item.inCart}</span>
+                                    <span class="incart-plus"> + </span>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <p>${item.productPrice}</p>
+                                <span><img onclick="deleteItem(this)" class="delete-icon" style="width:15px"src="./images/icon-delete.svg"></span>
+                            </div>
                         </div>
                         `;
                     });
                     document.querySelector('.cart-image-cost').innerHTML =`Total cost : Php ${cartCosts}`;
             }
-            
+        
     }
-
 
 
 
@@ -233,4 +252,3 @@ var cartBtn = document.querySelectorAll(".cart-btn")
 // display counts in cart end
 
 let filterBtns = document.querySelectorAll('.filter-btn')
-    
