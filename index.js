@@ -251,4 +251,50 @@ var cartBtn = document.querySelectorAll(".cart-btn")
     displayCart()
 // display counts in cart end
 
-let filterBtns = document.querySelectorAll('.filter-btn')
+
+
+
+// filtering products
+
+let arrayProducts = document.querySelectorAll('.product')
+    arrayProducts = [...arrayProducts]
+
+
+
+
+const displayShoes = () => {
+  arrayProducts.map(e => {
+      if(e.classList.contains('shoes')){
+        e.style = "display:block"
+      }else {e.style = "display:none" }
+  })
+}
+const displayShirts = () => {
+  arrayProducts.map(e => {
+      if(e.classList.contains('shirt')){
+        e.style = "display:block"
+      }else {e.style = "display:none" }
+  })
+}
+const displayWatches = () => {
+  arrayProducts.map(e => {
+      if(e.classList.contains('watch')){
+        e.style = "display:block"
+      }else {e.style = "display:none" }
+  })
+}
+const displayAll = () => {
+  arrayProducts.map(e => {
+      if(e.classList.contains('product')){
+        e.style = "display:block"
+      }else {e.style = "display:none" }
+  })
+}
+
+let filterShoes = document.querySelector('.filter-shoes').addEventListener('click', displayShoes)
+let filterShirt = document.querySelector('.filter-shirts').addEventListener('click', displayShirts)
+let filterWatches = document.querySelector('.filter-watches').addEventListener('click', displayWatches)
+let filterAll = document.querySelector('.filter-all').addEventListener('click', displayAll)
+
+
+
