@@ -259,9 +259,6 @@ var cartBtn = document.querySelectorAll(".cart-btn")
 let arrayProducts = document.querySelectorAll('.product')
     arrayProducts = [...arrayProducts]
 
-
-
-
 const displayShoes = () => {
   arrayProducts.map(e => {
       if(e.classList.contains('shoes')){
