@@ -13,7 +13,7 @@ let iconMenu = document.querySelector("#icon-menu");
     })
 // mobile nav bar end
 
-var cartBtn = document.querySelectorAll(".cart-btn")
+
 // html objects 
     let products = 
     [
@@ -139,9 +139,9 @@ var cartBtn = document.querySelectorAll(".cart-btn")
         },
 
     ]
-    //let simple = []
     
-// html objects
+var cartBtn = document.querySelectorAll(".cart-btn")
+    cartBtn = [...cartBtn]
     for(let i = 0; i < cartBtn.length; i++){
         cartBtn[i].addEventListener("click", () => {
             alert(`${products[i].productName} added to cart!`)
@@ -149,6 +149,7 @@ var cartBtn = document.querySelectorAll(".cart-btn")
             updatePrice(products[i])
         })    
     }
+    
     function cartNumbers(product){
         let cartCounts = localStorage.getItem("cartCounts")
             cartCounts = Number(cartCounts)
@@ -262,28 +263,28 @@ let arrayProducts = document.querySelectorAll('.product')
 const displayShoes = () => {
   arrayProducts.map(e => {
       if(e.classList.contains('shoes')){
-        e.style = "display:block"
+        e.style = "display:flex;"
       }else {e.style = "display:none" }
   })
 }
 const displayShirts = () => {
   arrayProducts.map(e => {
       if(e.classList.contains('shirt')){
-        e.style = "display:block"
+        e.style = "display:flex"
       }else {e.style = "display:none" }
   })
 }
 const displayWatches = () => {
   arrayProducts.map(e => {
       if(e.classList.contains('watch')){
-        e.style = "display:block"
+        e.style = "display:flex"
       }else {e.style = "display:none" }
   })
 }
 const displayAll = () => {
   arrayProducts.map(e => {
       if(e.classList.contains('product')){
-        e.style = "display:block"
+        e.style = "display:flex"
       }else {e.style = "display:none" }
   })
 }
@@ -292,6 +293,5 @@ let filterShoes = document.querySelector('.filter-shoes').addEventListener('clic
 let filterShirt = document.querySelector('.filter-shirts').addEventListener('click', displayShirts)
 let filterWatches = document.querySelector('.filter-watches').addEventListener('click', displayWatches)
 let filterAll = document.querySelector('.filter-all').addEventListener('click', displayAll)
-
 
 
