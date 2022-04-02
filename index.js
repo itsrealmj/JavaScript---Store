@@ -139,6 +139,7 @@ let iconMenu = document.querySelector("#icon-menu");
         },
 
     ]
+
     
 var cartBtn = document.querySelectorAll(".cart-btn")
     cartBtn = [...cartBtn]
@@ -260,38 +261,13 @@ var cartBtn = document.querySelectorAll(".cart-btn")
 let arrayProducts = document.querySelectorAll('.product')
     arrayProducts = [...arrayProducts]
 
-const displayShoes = () => {
-  arrayProducts.map(e => {
-      if(e.classList.contains('shoes')){
-        e.style = "display:flex;"
-      }else {e.style = "display:none" }
-  })
+function filtering(e) {
+    arrayProducts.filter(product => {
+         if (product.classList.contains(`${e.target.innerText}`)) {
+            product.style = "display:flex"
+         }else {
+            product.style = "display:none"
+         }
+    })  
 }
-const displayShirts = () => {
-  arrayProducts.map(e => {
-      if(e.classList.contains('shirt')){
-        e.style = "display:flex"
-      }else {e.style = "display:none" }
-  })
-}
-const displayWatches = () => {
-  arrayProducts.map(e => {
-      if(e.classList.contains('watch')){
-        e.style = "display:flex"
-      }else {e.style = "display:none" }
-  })
-}
-const displayAll = () => {
-  arrayProducts.map(e => {
-      if(e.classList.contains('product')){
-        e.style = "display:flex"
-      }else {e.style = "display:none" }
-  })
-}
-
-let filterShoes = document.querySelector('.filter-shoes').addEventListener('click', displayShoes)
-let filterShirt = document.querySelector('.filter-shirts').addEventListener('click', displayShirts)
-let filterWatches = document.querySelector('.filter-watches').addEventListener('click', displayWatches)
-let filterAll = document.querySelector('.filter-all').addEventListener('click', displayAll)
-
-
+document.querySelectorAll('.dishes button').forEach(btn => btn.addEventListener('click', filtering))

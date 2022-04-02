@@ -41,22 +41,21 @@
 <!--   Messenger Chat Plugin Code end  -->
 
     <header>
-        <div class="left">
+        <nav class="left">
             <h3>JavaScript Store</h3>
-            <div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#product-container">Menu</a></li>
-                    <li><a href="#about-us">Contacts</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="right">
-            <div><span style="position: relative; top: -1.1rem; left: 2.2rem; font-size: .7rem;" id="count-display"> 0</span>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#product-container">Menu</a></li>
+                <li><a href="#about-us">Contacts</a></li>
+            </ul>
+        </nav>
+        <nav class="right">
+            <section>
+                <p id="count-display"> 0</p>
                 <a href="cart.html" style="margin-right: 1.5rem; position: relative; border: none;"><img src="./images/icon-cart.svg" alt="" ></a>
                 
-            </div>
-            <div>
+            </section>
+            <section>
                 <img id="icon-menu" src="./images/icon-menu.svg" alt="">
                 <img id="icon-closed" style="display:none" src="./images/icon-close.svg" alt="">
                 <ul>
@@ -64,254 +63,261 @@
                     <li><a href="#product-container">Menu</a></li>
                     <li><a href="#about-us">Contacts</a></li>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </nav>
 
     </header>
+
     <main>
-        <div class="banner" id="banner">
-            <h1>Made, Just For <span><h1 class="you"> YOU </h1></span></h1>
-            
+        <section class="banner" id="banner">
+            <h1>Made, Just For You</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco.</p>
-            <div class="link">
+            <p class="link">
                 <a href="#product-container" id="below-menu-btn">Our products</a>
                 <a href="#about-us" id="below-aboutus-btn">About us</a>
-            </div>
-        </div>
-        <div class="banner-img">
+            </p>
+        </section>
+        <section class="banner-img">
             <img src="./images1/watch3.png" alt="">
-        </div>
+        </section>
     </main>
-    <div class="product-object">
-    </div>
-    <div class="dishes">
-        <button class="filter-shoes">Shoes</button>
-        <button class="filter-shirts">Shirts</button>
-        <button class="filter-watches" data-set="watch">Watches</button>
-        <button class="filter-all">All</button>
-    </div>  
-    <section>
-        <div id="product-container" class="product-container">
-            <div class="product shoes">
+
+  <!--   <div class="product-object">
+    </div> -->
+    <section class="dishes">
+        <button class="filter-shoes">shoes</button>
+        <button class="filter-shirts">shirt</button>
+        <button class="filter-glass">glass</button>
+        <button class="filter-watches" data-set="watch">watch</button>
+        <button class="filter-all">product</button>
+    </section>  
+
+<main>
+    <section id="product-container" class="product-container">
+
+            <figure class="product shoes">
                 <img src="./images1/shoes1.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Shoes One</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-                
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product watch">
+            <figure class="product watch">
                 <img src="./images1/watch1.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Watch One</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-                
-            </div>
-            <div class="product glass">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product glass">
                 <img src="./images1/glass1.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Glass One</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-                
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shirt">
+            <figure class="product shirt">
                 <img src="./images1/white.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>White Shirt</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-                
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shoes">
+            <figure class="product shoes">
                 <img src="./images1/shoes2.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Shoes Two.</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-                
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product watch">
+            <figure class="product watch">
                 <img src="./images1/watch2.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Watch Two</p>
                         <p class="price">&#8369;1,000</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product glass">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+            <figure class="product glass">
                 <img src="./images1/glass2.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Glass Two</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shirt">
+            <figure class="product shirt">
                 <img src="./images1/gray.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Gray Shirt.</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product shoes">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product shoes">
                 <img src="./images1/shoes3.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Shoes Three</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product watch">
+            <figure class="product watch">
                 <img src="./images1/watch3.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Watch Three</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product glass">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product glass">
                 <img src="./images1/glass3.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Glass Three</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shirt">
+            <figure class="product shirt">
                 <img src="./images1/blue.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Blue shirt</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product shoes">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product shoes">
                 <img src="./images1/shoes4.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Shoes Four</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product watch">
+            <figure class="product watch">
                 <img src="./images1/watch4.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Watch Four</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product glass">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product glass">
                 <img src="./images1/glass4.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Glass Four</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shirt">
+            <figure class="product shirt">
                 <img src="./images1/yellow.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Yellow Shirt</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product shoes">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product shoes">
                 <img src="./images1/shoes5.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Shoes Five</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product watch">
+            <figure class="product watch">
                 <img src="./images1/watch5.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Watch Five</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-            <div class="product glass">
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
+
+            <figure class="product glass">
                 <img src="./images1/glass5.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Glass Five</p>
                         <p class="price">&#8369;1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
 
-            <div class="product shirt">
+            <figure class="product shirt">
                 <img src="./images1/pink.png" alt="dish One">
-                <div class="description">
+                <figcaption class="description">
                     <div class="desc-price">
                         <p>Pink Shirt</p>
                         <p class="price">1,000.00</p>
                     </div>
-                    <button class="cart-btn">Add to cart</button>
-                </div>
-            </div>
-    </div>
+                </figcaption>
+                <button class="cart-btn">Add to cart</button>
+            </figure>
     </section>
+</main>
+
     <h1 style="text-align:center; color:#6e6969;">Promo Section</h1>
     <article>
         <!-- <img id="overlay" src="./images/logo.jpg" alt=""> -->
@@ -374,7 +380,10 @@
         <p style="margin-top:1rem;">&copy; JavaScript Store Dummy Inc.</p>
         <p>All Rights Reserved</p>
     </footer>
+
+
     <script src="index.js"></script>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
