@@ -140,6 +140,32 @@ let iconMenu = document.querySelector("#icon-menu");
 
     ]
 
+// PRODUCT CARD START
+let previewBtn = document.querySelectorAll('.preview')
+let productCardBg = document.querySelector('.product-card-bg')
+function closedCard(e) {
+    e.parentElement.parentElement.remove()
+}
+previewBtn.forEach((btn => {
+    btn.addEventListener('click', function(e) {
+        let image = e.target.parentElement.children[0]
+        
+        productCardBg.innerHTML = `<section class="product-card">
+                                        <section class="card">
+                                            <span class="closed-card" onclick="closedCard(this)"> X </span>
+                                            <img src="${image.src}">
+                                            <section class="card-description">
+                                                <p>${products[0].productName}</p>
+                                                <p>${products[0].productPrice}</p>
+                                                <div><span> - </span><span>${0}</span><span> + </span></div>
+                                                <button>Add to cart</button>
+                                            </section>
+                                        </section>
+                                    </section>`
+    })
+}))
+
+// PRODUCT CARD END
     
 var cartBtn = document.querySelectorAll(".cart-btn")
     cartBtn = [...cartBtn]
