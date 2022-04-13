@@ -143,22 +143,27 @@ let iconMenu = document.querySelector("#icon-menu");
 // PRODUCT CARD START
 let previewBtn = document.querySelectorAll('.preview')
 let productCardBg = document.querySelector('.product-card-bg')
+
 function closedCard(e) {
     e.parentElement.parentElement.remove()
 }
+
 previewBtn.forEach((btn => {
     btn.addEventListener('click', function(e) {
         let image = e.target.parentElement.children[0]
+        let description = e.target.parentElement.children[1].children[0].children[0]
+        let price = e.target.parentElement.children[1].children[0].children[1]
+
         
         productCardBg.innerHTML = `<section class="product-card">
                                         <section class="card">
                                             <span class="closed-card" onclick="closedCard(this)"> X </span>
                                             <img src="${image.src}">
                                             <section class="card-description">
-                                                <p>${products[0].productName}</p>
-                                                <p>${products[0].productPrice}</p>
-                                                <div><span> - </span><span>${0}</span><span> + </span></div>
-                                                <button>Add to cart</button>
+                                                <p>${description.innerText}</p>
+                                                <p>${price.innerText}</p>
+                                                <div><span> - </span><span>${1}</span><span> + </span></div>
+                                                <button onclick="tamaraw(this)">Add to cart</button>
                                             </section>
                                         </section>
                                     </section>`
@@ -166,7 +171,11 @@ previewBtn.forEach((btn => {
 }))
 
 // PRODUCT CARD END
-    
+var dictionary = []
+const tamaraw = (e , dictionary) => {
+    dictionary.push(e.innerText)
+    console.log(e.innerText)
+}
 var cartBtn = document.querySelectorAll(".cart-btn")
     cartBtn = [...cartBtn]
     for(let i = 0; i < cartBtn.length; i++){
@@ -297,3 +306,43 @@ function filtering(e) {
     })  
 }
 document.querySelectorAll('.dishes button').forEach(btn => btn.addEventListener('click', filtering))
+
+
+// GETTING USERS LOCATION START
+if (navigator.geolocation) {
+
+    let options = {
+      enableHighAccuracy: true,
+      timeout: 5000000,
+      maximumAge: 0
+    };
+
+    function success(position) {
+        let latitude = position.coords.latitude	
+        let longitude = position.coords.longitude
+
+            const apiKey = "e790755874e2f09c40fdb77960f89416"
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
+                .then(res => {
+                    return (res.json())
+                }).then(data => {
+                    console.log(data)
+                    let usersWeatherCondition = document.querySelector('.users-weather-condition')
+                        usersWeatherCondition.style = "color:green; position:absolute; right:1rem;"
+                        usersWeatherCondition.innerHTML = `<div>
+                                                                ${data.main.temp}°
+                                                                ${data.name}
+                                                            </div>`
+                }).catch(error => console.log(error, "Error fetching data"))
+    }
+
+
+    function error(err) {
+      let usersWeatherCondition = document.querySelector('.users-weather-condition')
+            usersWeatherCondition.style = "color:red; position:absolute; right:1rem"
+            usersWeatherCondition.innerHTML = `Could'nt display users weather data`
+    }
+    navigator.geolocation.getCurrentPosition(success, error, options)
+}
+    
+// GETTING USERS LOCATION END

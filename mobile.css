@@ -42,11 +42,22 @@ header .right ul {
 header .right li {
     padding: 2rem;
 }
-header .right a {
+header .right li a {
+    position: relative;
     text-decoration: none;
-    color:white;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #000;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.counts {
+    position: relative;
+    text-decoration: none;
+}
+.counts span {
+    font-size: .7rem;
+    position: absolute;
+    top: -1rem;
+    right: -.5rem;
 }
 
 /*  banner */
@@ -112,9 +123,15 @@ main .banner-img img {
 } 
 
 .dishes {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     padding: 0 1.1rem;
 }
 .dishes button{
+    /* display: flex; */
+    /* flex-direction: row; */
     padding: .7rem;
     border-radius: 5px;
     color: #6e6969;
@@ -145,44 +162,53 @@ section {
     /* width: 100%; */
 }
 .product-card-bg {
-    
 }
 .product-card img {
-    height: 20px;
-    width: 20px;
-    border: 1px solid gray;
+    height: 50%;
+    width: 100%;
 }
 .product-card {
-    position: fixed;
-    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    position:fixed;
     top: 0;
-    /* width: 100%; */
-    background-color: rgba(0, 0, 0, .6);
-    z-index: 10;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
 }
 .card {
     background-color: whitesmoke;
-    box-shadow: 1px 1px 10px 1px white;
-    height: 100%;
-    width: 90%;
+    box-shadow: 1px 1px 10px 1px orange;
+    border-radius: 10px;
+    height: 80%;
+    width: 80%;
     margin: 0 auto;
     padding: 2rem;
-    display: flex;
+    /* display: flex; */
     position: relative;
 }
 .closed-card {
     position: absolute;
     top:0;
+    border-radius: 0 5px 0 0;
     right: 0;
     border: 1px solid gray;
-    padding: .2rem .5rem;
+    padding: .5rem 1rem;
 }
 .product-card .card-description {
-    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .8rem 0;
 }
+.product-card .card-description div {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 50%;
+    background-color: gray;
+    padding: .3rem .5rem;
+}
+
 
 
 
@@ -206,11 +232,13 @@ section {
     flex-direction: column; */
 }
 .product .description .desc-price {
-    /* display: flex;
-    padding: .3rem 0;
-    justify-content: space-around; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem 0;
+    margin-bottom: .5rem;
 }
-.product button {
+.product button , .card button {
     font-size: .6rem;
     font-weight: bold;
     background-color: orange;
